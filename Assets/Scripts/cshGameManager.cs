@@ -24,8 +24,11 @@ public class cshGameManager : MonoBehaviourPun // 점수와 게임 오버 여부 및 게임 
 
     private static cshGameManager m_instance; // 싱글톤이 할당될 static 변수
 
-    public GameObject[] Players;
-    public GameObject[] PlayersPos;
+    public GameObject[] mrPlayers;
+    public GameObject[] mrPlayersPos;
+
+    public GameObject[] vrPlayers;
+    public GameObject[] vrPlayersPos;
 
 
     //private GameObject MixedRealitySceneContent;
