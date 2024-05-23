@@ -17659,6 +17659,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6198312365178194650, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198312365178194650, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 1299576066434920096}
     - target: {fileID: 9040788450491122690, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
       propertyPath: m_Name
       value: SampleController_Right
@@ -17668,6 +17676,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+--- !u!114 &1299576066434920096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4747443207459687154, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+  m_PrefabInstance: {fileID: 6047010477719561298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358593299294216272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3358593299294216272 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9040788450491122690, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
@@ -17726,6 +17745,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6198312365178194650, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198312365178194650, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 1589205530946283787}
     - target: {fileID: 9040788450491122690, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
       propertyPath: m_Name
       value: SampleController_Right
@@ -17735,6 +17762,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+--- !u!114 &1589205530946283787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4747443207459687154, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+  m_PrefabInstance: {fileID: 6336477209118270457}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3069455213524953083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3069455213524953083 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9040788450491122690, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
