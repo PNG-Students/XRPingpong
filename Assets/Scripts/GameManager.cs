@@ -113,8 +113,8 @@ public class GameManager : MonoBehaviourPun
 
     }
 
-    private void ActivateObject()
-    {
-        objectToActivate.SetActive(true);
-    }
+    //private void ActivateObject()
+    //{
+    //    objectToActivate.SetActive(true);
+    //}
 }

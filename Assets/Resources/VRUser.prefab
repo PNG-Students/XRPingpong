@@ -14404,7 +14404,6 @@ GameObject:
   - component: {fileID: -143345423030928387}
   - component: {fileID: 5062242270675411059}
   - component: {fileID: 8932115955442266445}
-  - component: {fileID: 7244460780088675465}
   m_Layer: 0
   m_Name: VRUser
   m_TagString: Untagged
@@ -14479,21 +14478,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &7244460780088675465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7572691856866650061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf7096d6eb9e646518fa7c110f9bdad2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraRig: {fileID: 0}
-  characterModel: {fileID: 4908137918943461922}
-  sensitivity: 1
 --- !u!1 &7578085811405567075
 GameObject:
   m_ObjectHideFlags: 0
