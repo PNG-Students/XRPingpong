@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7096d6eb9e646518fa7c110f9bdad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraRig: {fileID: 7572691857221222114}
+  cameraRig: {fileID: 7572691857221222116}
   characterModel: {fileID: 4908137918943461922}
   sensitivity: 1
 --- !u!1001 &7560505838441241786
@@ -542,6 +542,11 @@ Transform:
 --- !u!4 &7572691857221222114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 4b650a383c3760f449b65ff48bccdd5f, type: 3}
+  m_PrefabInstance: {fileID: 7572691857221608550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7572691857221222116 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 4b650a383c3760f449b65ff48bccdd5f, type: 3}
   m_PrefabInstance: {fileID: 7572691857221608550}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7572691857221509826 stripped

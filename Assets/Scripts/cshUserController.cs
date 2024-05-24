@@ -23,5 +23,7 @@ public class cshUserController : MonoBehaviour
 
         // 캐릭터 모델의 회전 값 업데이트
         characterModel.rotation = Quaternion.Euler(0f, cameraRotation.y, 0f);
+
+        characterModel.position = cameraRig.position;
     }
 }
