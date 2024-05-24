@@ -32,14 +32,14 @@ public class cshUserController : MonoBehaviourPun
 
             // 캐릭터 모델의 회전 값 업데이트
             characterModel.rotation = Quaternion.Euler(0f, cameraRotation.y, 0f);
-            characterModel.position = cameraRig.position + new Vector3(1.0f, 0, 0);
+            characterModel.position = cameraRig.position + new Vector3(0, -0.3f, 0);
 
             // 카메라의 회전 값
             Vector3 rightHandRotation = rightHandRig.rotation.eulerAngles;
 
             // 캐릭터 모델의 회전 값 업데이트
-            rightHandModel.rotation = Quaternion.Euler(0f, rightHandRotation.y, 0f);
-            rightHandModel.position = rightHandRig.position + new Vector3(1.0f, 0, 0);
+            rightHandModel.rotation = Quaternion.Euler(rightHandRotation.x, rightHandRotation.y, rightHandRotation.z);
+            rightHandModel.position = rightHandRig.position;
         }
         
     }
