@@ -19,7 +19,7 @@ public class cshVRuser : MonoBehaviourPun
     }
     void Start()
     {
-        if (!photonView.IsMine)
+        /*if (!photonView.IsMine)
         {
             // VR Ä«¸Þ¶ó FALSE
             //GetComponentInChildren<OVRCameraRig>().disableEyeAnchorCameras = true;
@@ -41,7 +41,7 @@ public class cshVRuser : MonoBehaviourPun
             //GetComponentInChildren<OVRManager>().enabled = false;
             //GetComponentInChildren<OVRHeadsetEmulator>().enabled = false;
             Debug.Log("Camera false");
-        }
+        }*/
     }
 
     // Update is called once per frame

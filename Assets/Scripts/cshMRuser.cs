@@ -17,10 +17,10 @@ public class cshMRuser : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        if (!photonView.IsMine)
+        /*if (!photonView.IsMine)
         {
             // MR ?????? FALSE
-            GetComponentInChildren<OVRCameraRig>().disableEyeAnchorCameras = true;
+            //GetComponentInChildren<OVRCameraRig>().disableEyeAnchorCameras = true;
 
             Camera[] cameras;
             cameras = transform.gameObject.GetComponentsInChildren<Camera>();
@@ -38,7 +38,7 @@ public class cshMRuser : MonoBehaviourPun
             //GetComponentInChildren<OVRCameraRig>().enabled = false;
             //GetComponentInChildren<OVRHeadsetEmulator>().enabled = false;
             Debug.Log("Camera false");
-        }
+        }*/
     }
 
     // Update is called once per frame
