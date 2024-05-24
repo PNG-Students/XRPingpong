@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Unity.VisualScripting;
 
 public class cshMRuser : MonoBehaviourPun
 {
+    private void Awake()
+    {
+        if (!photonView.IsMine)
+        {
+            DestroyImmediate(GetComponentInChildren<OVRManager>());
 
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +36,6 @@ public class cshMRuser : MonoBehaviourPun
             //GetComponent<CharacterController>().enabled = false;
             //GetComponent<OVRPlayerController>().enabled = false;
             //GetComponentInChildren<OVRCameraRig>().enabled = false;
-            //GetComponentInChildren<OVRManager>().enabled = false;
             //GetComponentInChildren<OVRHeadsetEmulator>().enabled = false;
             Debug.Log("Camera false");
         }

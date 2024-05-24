@@ -2,11 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEditor.SceneManagement;
 
 public class cshVRuser : MonoBehaviourPun
 {
 
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if (!photonView.IsMine)
+        {
+            DestroyImmediate(GetComponentInChildren<OVRManager>()); 
+            
+        }
+    }
     void Start()
     {
         if (!photonView.IsMine)
