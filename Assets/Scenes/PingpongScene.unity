@@ -4911,6 +4911,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2048978648728346068, guid: 4a9616009765e7848809fb95f3cfcced, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7828387954267345506, guid: 4a9616009765e7848809fb95f3cfcced, type: 3}
       propertyPath: sceneViewId
       value: 7
@@ -17887,7 +17891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2092910319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18483,6 +18487,10 @@ PrefabInstance:
     - target: {fileID: 8391198864846864061, guid: 9ad6373024c5b4549a6aa82a751e8493, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816630180465661295, guid: 9ad6373024c5b4549a6aa82a751e8493, type: 3}
+      propertyPath: sceneViewId
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

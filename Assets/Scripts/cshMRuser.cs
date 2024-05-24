@@ -6,6 +6,9 @@ using Unity.VisualScripting;
 
 public class cshMRuser : MonoBehaviourPun
 {
+    public GameObject tablePrefab;
+    private GameObject roomTable;
+
     private void Awake()
     {
         if (!photonView.IsMine)
@@ -39,6 +42,32 @@ public class cshMRuser : MonoBehaviourPun
             //GetComponentInChildren<OVRHeadsetEmulator>().enabled = false;
             Debug.Log("Camera false");
         }*/
+
+        StartCoroutine(ExecuteAfterDelay(3.0f));
+    }
+
+    private IEnumerator ExecuteAfterDelay(float delay)
+    {
+        // Wait for the specified delay time
+        yield return new WaitForSeconds(delay);
+
+        // Find the roomTable object
+        GameObject roomTable = GameObject.Find("TableVolume(Clone)");
+        if (roomTable != null)
+        {
+            // Instantiate the tablePrefab using PhotonNetwork
+            GameObject instantiatedTable = PhotonNetwork.Instantiate(tablePrefab.name, roomTable.transform.position, roomTable.transform.rotation);
+
+            // Set the scale of the instantiated table to match the roomTable
+            instantiatedTable.transform.Find("Parent").localScale = roomTable.transform.localScale;
+            //instantiatedTable.transform.localScale = roomTable.transform.localScale;
+
+            Debug.Log("2 seconds have passed, table instantiated and transformed.");
+        }
+        else
+        {
+            Debug.LogError("roomTable not found!");
+        }
     }
 
     // Update is called once per frame
