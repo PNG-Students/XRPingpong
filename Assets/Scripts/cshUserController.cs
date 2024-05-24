@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class cshUserController : MonoBehaviour
 {
-    public Transform cameraRig; // 카메라 리그
+    private Transform cameraRig; // 카메라 리그
+    private Transform rightHandRig; // 카메라 리그
     public Transform characterModel; // 캐릭터 모델
 
     public float sensitivity = 1f; // 카메라 민감도
@@ -13,6 +14,7 @@ public class cshUserController : MonoBehaviour
     void Start()
     {
         cameraRig = GameObject.Find("CenterEyeAnchor").transform;
+        rightHandRig = GameObject.Find("RightHandAnchor").transform;
     }
 
     // Update is called once per frame
