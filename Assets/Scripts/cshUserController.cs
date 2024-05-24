@@ -12,7 +12,7 @@ public class cshUserController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraRig = GameObject.Find("CenterEyeAnchor").transform;
     }
 
     // Update is called once per frame
@@ -24,6 +24,6 @@ public class cshUserController : MonoBehaviour
         // 캐릭터 모델의 회전 값 업데이트
         characterModel.rotation = Quaternion.Euler(0f, cameraRotation.y, 0f);
 
-        characterModel.position = cameraRig.position;
+        characterModel.position = cameraRig.position + new Vector3(1.0f,0,0);
     }
 }
