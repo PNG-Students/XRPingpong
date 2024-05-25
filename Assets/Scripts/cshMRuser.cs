@@ -15,6 +15,8 @@ public class cshMRuser : MonoBehaviourPun
         if (!photonView.IsMine)
         {
             DestroyImmediate(GetComponentInChildren<OVRManager>());
+            DestroyImmediate(GameObject.Find("TableVolume(Clone)"));
+            DestroyImmediate(GameObject.Find("PingPongBall(Clone)"));
 
         }
     }

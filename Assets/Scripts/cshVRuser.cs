@@ -15,6 +15,12 @@ public class cshVRuser : MonoBehaviourPun
         {
             DestroyImmediate(GetComponentInChildren<OVRManager>());
             DestroyImmediate(GameObject.Find("[BuildingBlock] Room Model"));
+            DestroyImmediate(GameObject.Find("TableVolume"));
+        }
+        if (photonView.IsMine)
+        {
+            DestroyImmediate(GameObject.Find("TableVolume(Clone)"));
+            DestroyImmediate(GameObject.Find("PingPongBall(Clone)"));
         }
     }
     void Start()
