@@ -53,6 +53,14 @@ public class cshVRuser : MonoBehaviourPun
         {
             return;
         }
+
+        if (photonView.IsMine)
+        {
+            PhotonNetwork.Destroy(GameObject.Find("TableVolume(Clone)"));
+            PhotonNetwork.Destroy(GameObject.Find("PingPongBall(Clone)"));
+            Debug.Log("Destroy????");
+            return;
+        }
     }
 
     private void FixedUpdate()

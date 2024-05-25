@@ -66,8 +66,7 @@ public class cshMRuser : MonoBehaviourPun
 
             if (!photonView.IsMine)
             {
-                PhotonNetwork.Destroy(GameObject.Find("TableVolume(Clone)"));
-                PhotonNetwork.Destroy(GameObject.Find("PingPongBall(Clone)"));
+                
             }
 
             //instantiatedTable.transform.localScale = roomTable.transform.localScale;
