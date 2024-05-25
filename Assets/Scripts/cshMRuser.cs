@@ -9,7 +9,8 @@ public class cshMRuser : MonoBehaviourPun
     public GameObject tablePrefab;
     private GameObject roomTable;
     public GameObject ballPrefab;
-
+    private GameObject instantiatedTable;
+    private GameObject instantiatedBall;
     private void Awake()
     {
         if (!photonView.IsMine)
@@ -58,8 +59,17 @@ public class cshMRuser : MonoBehaviourPun
         if (roomTable != null)
         {
             // Instantiate the tablePrefab using PhotonNetwork
-            GameObject instantiatedTable = PhotonNetwork.Instantiate(tablePrefab.name, roomTable.transform.position, roomTable.transform.rotation);
-            GameObject instantiatedBall = PhotonNetwork.Instantiate(ballPrefab.name, ballPos.transform.position, ballPos.transform.rotation);
+            GameObject[] tables = GameObject.FindGameObjectsWithTag("Table");
+
+            // Cube 오브젝트의 개수를 출력합니다.
+            int tableCount = tables.Length;
+            
+
+            if (tableCount < 1)
+            {
+                instantiatedTable = PhotonNetwork.Instantiate(tablePrefab.name, roomTable.transform.position, roomTable.transform.rotation);
+                instantiatedBall = PhotonNetwork.Instantiate(ballPrefab.name, ballPos.transform.position, ballPos.transform.rotation);
+            }
 
             // Set the scale of the instantiated table to match the roomTable
             instantiatedTable.transform.localScale = roomTable.transform.Find("Parent").localScale;
@@ -84,9 +94,9 @@ public class cshMRuser : MonoBehaviourPun
     {
         if (!photonView.IsMine)
         {
-            DestroyImmediate(GameObject.Find("TableVolume(Clone)"));
+            /*DestroyImmediate(GameObject.Find("TableVolume(Clone)"));
             DestroyImmediate(GameObject.Find("PingPongBall(Clone)"));
-            Debug.Log("Destroy????");
+            Debug.Log("Destroy????");*/
             return;
         }
     }
