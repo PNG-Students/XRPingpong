@@ -15,8 +15,6 @@ public class cshMRuser : MonoBehaviourPun
         if (!photonView.IsMine)
         {
             DestroyImmediate(GetComponentInChildren<OVRManager>());
-            DestroyImmediate(GameObject.Find("TableVolume(Clone)"));
-            DestroyImmediate(GameObject.Find("PingPongBall(Clone)"));
 
         }
     }
@@ -65,6 +63,12 @@ public class cshMRuser : MonoBehaviourPun
 
             // Set the scale of the instantiated table to match the roomTable
             instantiatedTable.transform.localScale = roomTable.transform.Find("Parent").localScale;
+
+            if (!photonView.IsMine)
+            {
+                PhotonNetwork.Destroy(GameObject.Find("TableVolume(Clone)"));
+                PhotonNetwork.Destroy(GameObject.Find("PingPongBall(Clone)"));
+            }
 
             //instantiatedTable.transform.localScale = roomTable.transform.localScale;
 
