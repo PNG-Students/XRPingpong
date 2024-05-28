@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviourPun
 
 
 
-    private Vector3 VRSpawnPos; // VR 위치 저장할 변수
+    public static Vector3 VRSpawnPos; // VR 위치 저장할 변수
 
 
 
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviourPun
         // ?????? ???? ???? ???? ?????????? ????????????.
         Invoke("ActivateObject", delayInSeconds);
 
-        VRSpawnPos = GameObject.Find("VRSpawnPos").transform.position;
+        
 
         if (userId == 0)//mr??? ??
         {
@@ -88,6 +88,8 @@ public class GameManager : MonoBehaviourPun
 
             PhotonNetwork.Instantiate(MRPlayerPrefab.name, MRSpawnPosPrefab.transform.position, Quaternion.identity);
             //playerCnt++;
+
+
         }
         if (userId == 1)//vr?????? ????
         {

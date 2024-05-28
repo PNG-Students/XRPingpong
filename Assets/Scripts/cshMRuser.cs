@@ -11,6 +11,11 @@ public class cshMRuser : MonoBehaviourPun
     public GameObject ballPrefab;
     private GameObject instantiatedTable;
     private GameObject instantiatedBall;
+
+
+
+
+
     private void Awake()
     {
         if (!photonView.IsMine)
@@ -56,6 +61,9 @@ public class cshMRuser : MonoBehaviourPun
         // Find the roomTable object
         GameObject roomTable = GameObject.Find("TableVolume(Clone)");
         GameObject ballPos = GameObject.Find("BallSpawnPos");
+        GameManager.VRSpawnPos = GameObject.Find("VRSpawnPos").transform.position;
+
+
         if (roomTable != null)
         {
             // Instantiate the tablePrefab using PhotonNetwork
