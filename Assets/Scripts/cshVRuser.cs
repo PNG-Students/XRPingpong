@@ -20,7 +20,7 @@ public class cshVRuser : MonoBehaviourPun
     }
     void Start()
     {
-        transform.position = GameObject.Find("VRSpawnPos").transform.position;
+        //transform.position = GameObject.Find("VRSpawnPos").transform.position;
         if (!photonView.IsMine)
         {
             
