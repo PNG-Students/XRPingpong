@@ -689,8 +689,62 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6780946789710160815, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8806508665791477904}
+    - targetCorrespondingSourceObject: {fileID: 6780946789710160815, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2173318303374284753}
   m_SourcePrefab: {fileID: 100100000, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
+--- !u!1 &1919529000326772479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6780946789710160815, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
+  m_PrefabInstance: {fileID: 4952071011550254416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &8806508665791477904
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919529000326772479}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2173318303374284753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919529000326772479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
 --- !u!4 &7731891462673587434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3455518793671805370, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
