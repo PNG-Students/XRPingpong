@@ -169,6 +169,7 @@ MonoBehaviour:
   - {fileID: 8932115955442266445}
   - {fileID: 340741296439841949}
   - {fileID: 7468324118228465264}
+  - {fileID: 3418675381484871065}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -266,6 +267,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+--- !u!114 &3418675381484871065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5710976021264283313, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+  m_PrefabInstance: {fileID: 6931291938687314728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9100867587665627448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2196669825291477520, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
@@ -279,6 +291,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2074722596736593879}
     m_Modifications:
+    - target: {fileID: 1985198970247444295, guid: 9a032a9de00323046b8d60b020daf874, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2862800361792390178, guid: 9a032a9de00323046b8d60b020daf874, type: 3}
       propertyPath: m_Name
       value: jarst_people (16)
