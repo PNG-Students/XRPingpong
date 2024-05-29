@@ -16,8 +16,10 @@ public class cshUserController : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        characterModel.SetActive(false);
-        
+        if (photonView.IsMine)
+        {
+            characterModel.SetActive(false);
+        }
     }
 
     // Update is called once per frame
