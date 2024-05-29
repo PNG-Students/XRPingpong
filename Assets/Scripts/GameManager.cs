@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviourPun
             StartCoroutine(ExecuteAfterDelay(2.0f));
             // ?????? ???? ???? ????
             //Vector3 randomSpawnPos = VRSpawnPosPrefab.transform.position;//Random.insideUnitSphere * 5f;
-            Vector3 randomSpawnPos = new Vector3(0.0f, 0.0f, 0.0f);//Random.insideUnitSphere * 5f;
+            //Vector3 randomSpawnPos = new Vector3(0.0f, 0.0f, 0.0f);//Random.insideUnitSphere * 5f;
 
             //VRSpawnPos = GameObject.Find("VRSpawnPos");
 
@@ -117,9 +117,9 @@ public class GameManager : MonoBehaviourPun
         // Wait for the specified delay time
         yield return new WaitForSeconds(delay);
 
-        GameObject.Find("[BuildingBlock] Camera Rig").transform.position = GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position;
+        GameObject.Find("[BuildingBlock] Camera Rig").transform.position = new Vector3(GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position.x, 0, GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position.z);
         VRCam = GameObject.Find("[BuildingBlock] Camera Rig").transform;
-        PhotonNetwork.Instantiate(VRPlayerPrefab.name, new Vector3(VRCam.position.x, 0, VRCam.position.z), Quaternion.identity);
+        PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.position, Quaternion.identity);
         Debug.Log("TransFORM: " + VRCam.position.x + " " + VRCam.position.y + " " + VRCam.position.z);
     }
 
