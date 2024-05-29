@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightHandModel: {fileID: 296434497759665565}
-  characterModel: {fileID: 4298336192002635345}
+  characterModel: {fileID: 840673298795895784}
   sensitivity: 1
 --- !u!1 &7698282275388809760
 GameObject:
@@ -1483,13 +1483,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5710976021264283313, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+      propertyPath: m_SynchronizeVelocity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5963542282165363804, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
       propertyPath: m_Constraints
-      value: 126
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5963542282165363804, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6198312365178194650, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
       propertyPath: ObservedComponents.Array.size
