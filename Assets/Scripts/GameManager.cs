@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviourPun
             // ?????? ????
             Destroy(gameObject);
         }
+        
     }
 
     public GameObject objectToActivate; // ???????? ???? ????????
@@ -88,6 +89,11 @@ public class GameManager : MonoBehaviourPun
         }
         if (userId == 1)//vr?????? ????
         {
+            if (!photonView.IsMine)
+            {
+                DestroyImmediate(GameObject.Find("[BuildingBlock] Room Model"));
+                DestroyImmediate(GameObject.Find("[BuildingBlock] Passthrough"));
+            }
             StartCoroutine(ExecuteAfterDelay(2.0f));
             // ?????? ???? ???? ????
             //Vector3 randomSpawnPos = VRSpawnPosPrefab.transform.position;//Random.insideUnitSphere * 5f;
@@ -116,10 +122,10 @@ public class GameManager : MonoBehaviourPun
     {
         // Wait for the specified delay time
         yield return new WaitForSeconds(delay);
-
+        
         GameObject.Find("[BuildingBlock] Camera Rig").transform.position = GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position;
         VRCam = GameObject.Find("[BuildingBlock] Camera Rig").transform;
-        PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.position, VRCam.rotation);
         Debug.Log("TransFORM: " + VRCam.position.x + " " + VRCam.position.y + " " + VRCam.position.z);
     }
 

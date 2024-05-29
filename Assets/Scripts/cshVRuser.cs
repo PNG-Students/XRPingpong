@@ -14,7 +14,7 @@ public class cshVRuser : MonoBehaviourPun
         if (!photonView.IsMine)
         {
             DestroyImmediate(GetComponentInChildren<OVRManager>());
-            DestroyImmediate(GameObject.Find("[BuildingBlock] Room Model"));
+            //DestroyImmediate(GameObject.Find("[BuildingBlock] Room Model"));
             DestroyImmediate(GameObject.Find("TableVolume"));
         }
     }
