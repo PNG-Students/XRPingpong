@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviourPun
 
 
     public GameObject VRSpawnPos; // VR 위치 저장할 변수
-    public GameObject VRCam;
+    public Transform VRCam;
 
 
     private int playerCnt = 0;
@@ -117,10 +117,10 @@ public class GameManager : MonoBehaviourPun
         // Wait for the specified delay time
         yield return new WaitForSeconds(delay);
 
-       VRCam = GameObject.Find("[BuildingBlock] Camera Rig");
-        VRCam.transform.position = GameObject.Find("TableVolume(Clone)").transform.Find("VRSpawnPos").transform.position;
-        PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.transform.position, Quaternion.identity);
-       Debug.Log(VRCam.transform.position.x + " " + VRCam.transform.position.y + " " + VRCam.transform.position.z);
+        GameObject.Find("[BuildingBlock] Camera Rig").transform.position = GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position;
+        VRCam = GameObject.Find("[BuildingBlock] Camera Rig").transform;
+        PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.position, Quaternion.identity);
+        Debug.Log("TransFORM: " + VRCam.position.x + " " + VRCam.position.y + " " + VRCam.position.z);
     }
 
     //private void ActivateObject()
