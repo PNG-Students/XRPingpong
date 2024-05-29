@@ -97,10 +97,6 @@ public class GameManager : MonoBehaviourPun
 
             // ???????????? ???? ?????????????? ???? ????  
             // ???? ???? ?????????? ???????? ???? ???????? ???? ?????? ???????????? ????
-            VRCam = GameObject.Find("[BuildingBlock] Camera Rig");
-            VRCam.transform.position = GameObject.Find("VRSpawnPos").transform.position;
-            PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.transform.position, Quaternion.identity);
-            Debug.Log(VRCam.transform.position.x + " " + VRCam.transform.position.y + " " + VRCam.transform.position.z);
             //playerCnt++;
         }
         else
@@ -122,8 +118,8 @@ public class GameManager : MonoBehaviourPun
         yield return new WaitForSeconds(delay);
 
        VRCam = GameObject.Find("[BuildingBlock] Camera Rig");
-       VRCam.transform.position = GameObject.Find("VRSpawnPos").transform.position;
-       PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.transform.position, Quaternion.identity);
+        VRCam.transform.position = GameObject.Find("TableVolume(Clone)").transform.Find("VRSpawnPos").transform.position;
+        PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.transform.position, Quaternion.identity);
        Debug.Log(VRCam.transform.position.x + " " + VRCam.transform.position.y + " " + VRCam.transform.position.z);
     }
 
