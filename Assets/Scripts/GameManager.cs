@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviourPun
         // Wait for the specified delay time
         yield return new WaitForSeconds(delay);
 
-        GameObject.Find("[BuildingBlock] Camera Rig").transform.position = new Vector3(GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position.x, 0, GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position.z);
+        GameObject.Find("[BuildingBlock] Camera Rig").transform.position = GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position;
         VRCam = GameObject.Find("[BuildingBlock] Camera Rig").transform;
         PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.position, Quaternion.identity);
         Debug.Log("TransFORM: " + VRCam.position.x + " " + VRCam.position.y + " " + VRCam.position.z);
