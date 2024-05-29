@@ -89,11 +89,7 @@ public class GameManager : MonoBehaviourPun
         }
         if (userId == 1)//vr?????? ????
         {
-            if (!photonView.IsMine)
-            {
-                DestroyImmediate(GameObject.Find("[BuildingBlock] Room Model"));
-                DestroyImmediate(GameObject.Find("[BuildingBlock] Passthrough"));
-            }
+            
             StartCoroutine(ExecuteAfterDelay(2.0f));
             // ?????? ???? ???? ????
             //Vector3 randomSpawnPos = VRSpawnPosPrefab.transform.position;//Random.insideUnitSphere * 5f;

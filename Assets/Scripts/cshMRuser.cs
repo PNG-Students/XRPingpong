@@ -21,7 +21,8 @@ public class cshMRuser : MonoBehaviourPun
         if (!photonView.IsMine)
         {
             DestroyImmediate(GetComponentInChildren<OVRManager>());
-
+            DestroyImmediate(GameObject.Find("[BuildingBlock] Room Model"));
+            DestroyImmediate(GameObject.Find("[BuildingBlock] Passthrough"));
         }
     }
     // Start is called before the first frame update
