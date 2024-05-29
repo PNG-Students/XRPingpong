@@ -59,12 +59,6 @@ public class GameManager : MonoBehaviourPun
         }
     }
 
-
-
-
-
-
-
     public GameObject objectToActivate; // ???????? ???? ????????
     public float delayInSeconds = 3f; // ?????? ???? (??)
 
@@ -94,6 +88,7 @@ public class GameManager : MonoBehaviourPun
         }
         if (userId == 1)//vr?????? ????
         {
+            StartCoroutine(ExecuteAfterDelay(2.0f));
             // ?????? ???? ???? ????
             //Vector3 randomSpawnPos = VRSpawnPosPrefab.transform.position;//Random.insideUnitSphere * 5f;
             Vector3 randomSpawnPos = new Vector3(0.0f, 0.0f, 0.0f);//Random.insideUnitSphere * 5f;
@@ -119,9 +114,17 @@ public class GameManager : MonoBehaviourPun
             //GameObject temp = PhotonNetwork.Instantiate(MRPlayerPrefab.name, randomSpawnPos, Quaternion.identity);
             //temp.transform.parent = MRPCamera.transform;
         }
+    }
 
+    private IEnumerator ExecuteAfterDelay(float delay)
+    {
+        // Wait for the specified delay time
+        yield return new WaitForSeconds(delay);
 
-
+       VRCam = GameObject.Find("[BuildingBlock] Camera Rig");
+       VRCam.transform.position = GameObject.Find("VRSpawnPos").transform.position;
+       PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.transform.position, Quaternion.identity);
+       Debug.Log(VRCam.transform.position.x + " " + VRCam.transform.position.y + " " + VRCam.transform.position.z);
     }
 
     //private void ActivateObject()
