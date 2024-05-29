@@ -1041,7 +1041,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightHandModel: {fileID: 296434497759665565}
-  characterModel: {fileID: 840673298795895784}
+  characterTransform: {fileID: 4298336192002635345}
+  characterModel: {fileID: 204123949487483844}
   sensitivity: 1
 --- !u!1 &7698282275388809760
 GameObject:
@@ -1607,6 +1608,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90862be914562f4498cde42f9878937c, type: 3}
+--- !u!1 &204123949487483844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5740419741781297792, guid: 90862be914562f4498cde42f9878937c, type: 3}
+  m_PrefabInstance: {fileID: 5584218286076879172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &693238826028085630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4963461551478788154, guid: 90862be914562f4498cde42f9878937c, type: 3}
