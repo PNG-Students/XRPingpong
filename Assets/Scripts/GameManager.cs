@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviourPun
 {
@@ -36,8 +37,8 @@ public class GameManager : MonoBehaviourPun
 
 
 
-    public static Vector3 VRSpawnPos; // VR 위치 저장할 변수
-
+    public GameObject VRSpawnPos; // VR 위치 저장할 변수
+    public GameObject VRCam;
 
 
     private int playerCnt = 0;
@@ -101,7 +102,10 @@ public class GameManager : MonoBehaviourPun
 
             // ???????????? ???? ?????????????? ???? ????  
             // ???? ???? ?????????? ???????? ???? ???????? ???? ?????? ???????????? ????
-            PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRSpawnPos, Quaternion.identity);
+            Debug.Log(VRSpawnPos.transform.position.x + " " + VRSpawnPos.transform.position.y + " "+ VRSpawnPos.transform.position.z);
+            VRCam = GameObject.Find("[BuildingBlock] Camera Rig");
+            VRCam.transform.position = VRSpawnPos.transform.position;
+            PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRSpawnPos.transform.position, Quaternion.identity);
             //playerCnt++;
         }
         else
