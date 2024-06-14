@@ -599,6 +599,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4747443207459687154}
+  - {fileID: 5710976021264283313}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -708,7 +709,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2226062334063126974}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e7cccf1ead636d0419c5404d2e2f5ebf, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -748,7 +749,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &5710976021264283313
 MonoBehaviour:
   m_ObjectHideFlags: 0

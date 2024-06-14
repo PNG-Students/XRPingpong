@@ -683,6 +683,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 4139304558697758301, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6262270882293604816, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -699,6 +703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MyPingPongT
       objectReference: {fileID: 0}
+    - target: {fileID: 7779191358946396441, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: e7cccf1ead636d0419c5404d2e2f5ebf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -741,7 +749,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2173318303374284753
 MonoBehaviour:
   m_ObjectHideFlags: 0

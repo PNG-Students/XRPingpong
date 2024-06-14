@@ -687,19 +687,23 @@ PrefabInstance:
     - target: {fileID: 6262270882293604816, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 5561349426305759274, guid: 0dc266068eea9434b8ba52d2c9837f1e, type: 3}
+      objectReference: {fileID: 2100000, guid: 70825f89f3dabdd4e980d678098ea984, type: 2}
     - target: {fileID: 6262270882293604816, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 6034957751646507721, guid: 0dc266068eea9434b8ba52d2c9837f1e, type: 3}
+      objectReference: {fileID: 2100000, guid: 728f1269be5564f4a8fe88e81ab5fe6d, type: 2}
     - target: {fileID: 6262270882293604816, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: -4597107667637640440, guid: 0dc266068eea9434b8ba52d2c9837f1e, type: 3}
+      objectReference: {fileID: 2100000, guid: df8d12ea2d4044742a8cd6c142603fe8, type: 2}
     - target: {fileID: 6780946789710160815, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
       propertyPath: m_Name
       value: MyPingPongT
       objectReference: {fileID: 0}
+    - target: {fileID: 7779191358946396441, guid: 9c9dfac43c06061479fb8fd34dc07442, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: e7cccf1ead636d0419c5404d2e2f5ebf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -742,7 +746,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2053266018648858532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,6 +779,10 @@ PrefabInstance:
     - target: {fileID: 389630478771019620, guid: 99fd4db420939fb4682d0f7ed50b682f, type: 3}
       propertyPath: m_Name
       value: Stadium
+      objectReference: {fileID: 0}
+    - target: {fileID: 389630478771019620, guid: 99fd4db420939fb4682d0f7ed50b682f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 637585988711111660, guid: 99fd4db420939fb4682d0f7ed50b682f, type: 3}
       propertyPath: m_LocalScale.x
