@@ -24,7 +24,7 @@ public class cshBat : MonoBehaviour
     DateTime? lastHitAt;
     private void Start()
     {
-        ExecuteAfterDelay(5.0f);
+        StartCoroutine(ExecuteAfterDelay(5.0f));
     }
 
     private void Update()
