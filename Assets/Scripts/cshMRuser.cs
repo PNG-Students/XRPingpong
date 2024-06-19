@@ -76,8 +76,10 @@ public class cshMRuser : MonoBehaviourPun
             {
                 instantiatedTable = PhotonNetwork.Instantiate(tablePrefab.name, roomTable.transform.position, roomTable.transform.rotation);
                 instantiatedBall = PhotonNetwork.Instantiate(ballPrefab.name, ballPos.transform.position, ballPos.transform.rotation);
+
                 // Set the scale of the instantiated table to match the roomTable
                 instantiatedTable.transform.localScale = roomTable.transform.Find("Parent").localScale;
+                roomTable.SetActive(false);
             }
 
             

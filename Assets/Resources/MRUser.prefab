@@ -1486,7 +1486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5710976021264283313, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
       propertyPath: m_SynchronizeVelocity
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963542282165363804, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5963542282165363804, guid: 0ddb1bd8b9ba4604e87bdeaf9cf28206, type: 3}
       propertyPath: m_Constraints

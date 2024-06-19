@@ -248,6 +248,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2473419245103212754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4089345001092780888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513863995759600395}
+  m_Layer: 0
+  m_Name: hit_point 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1513863995759600395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089345001092780888}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000091583395, y: 0.8788171, z: 0.47715878, w: 0.00016867561}
+  m_LocalPosition: {x: 0, y: 0.095, z: 0.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2196669825291477520}
+  m_LocalEulerAnglesHint: {x: 303, y: -180.022, z: 0}
 --- !u!1 &4567035923811521649
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +341,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2473419245103212754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5457454385948461687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527326385922162776}
+  m_Layer: 0
+  m_Name: hit_point 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527326385922162776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457454385948461687}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00016867561, y: -0.47715878, z: 0.8788171, w: -0.000091583395}
+  m_LocalPosition: {x: 0, y: 0.048, z: 0.1105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2196669825291477520}
+  m_LocalEulerAnglesHint: {x: 123, y: -180.022, z: 0}
 --- !u!1 &6073715394975620841
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,6 +593,7 @@ GameObject:
   - component: {fileID: 1641689392052502338}
   - component: {fileID: 6198312365178194650}
   - component: {fileID: 4747443207459687154}
+  - component: {fileID: 1347552675537955525}
   m_Layer: 0
   m_Name: SampleController_Right
   m_TagString: Untagged
@@ -556,6 +619,8 @@ Transform:
   - {fileID: 8704968577343309201}
   - {fileID: 2473419245103212754}
   - {fileID: 2936301047639137197}
+  - {fileID: 1513863995759600395}
+  - {fileID: 1527326385922162776}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1641689392052502338
@@ -619,6 +684,28 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &1347552675537955525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040788450491122690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77072252d402c74c879ed892bfd5efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minVelocity: 1
+  maxVelocity: 1
+  hitThreshold: 0.07
+  timeThresholdSeconds: 2
+  ball: {fileID: 0}
+  lastHitInSeconds: 0
+  hitPoint1: {fileID: 1513863995759600395}
+  hitPoint2: {fileID: 1527326385922162776}
+  centerPoint: {fileID: 1513863995759600395}
+  power: 4
 --- !u!1001 &7909837105151013047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,7 +796,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2226062334063126974}
-  m_Material: {fileID: 13400000, guid: e7cccf1ead636d0419c5404d2e2f5ebf, type: 2}
+  m_Material: {fileID: 13400000, guid: da139580e774d454e9502d214164a55b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -745,7 +832,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -763,8 +850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
 --- !u!4 &2936301047639137197 stripped
 Transform:

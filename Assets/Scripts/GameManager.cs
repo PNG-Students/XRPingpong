@@ -118,10 +118,17 @@ public class GameManager : MonoBehaviourPun
     {
         // Wait for the specified delay time
         yield return new WaitForSeconds(delay);
-        
+
         GameObject.Find("[BuildingBlock] Camera Rig").transform.position = GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.position;
+        GameObject.Find("[BuildingBlock] Camera Rig").transform.rotation = GameObject.Find("TableVolume(Clone)").transform.Find("Parent").transform.Find("VRSpawnPos").transform.rotation;
+        GameObject.Find("[BuildingBlock] Camera Rig").GetComponent<OVRManager>().trackingOriginType = OVRManager.TrackingOrigin.EyeLevel;
+        GameObject.Find("CenterEyeAnchor").GetComponent<Camera>().clearFlags = CameraClearFlags.Skybox;
+
+        GameObject stadium = GameObject.Find("TableVolume(Clone)").transform.Find("Parent").Find("Stadium").gameObject;
+        stadium.SetActive(true);
+
         VRCam = GameObject.Find("[BuildingBlock] Camera Rig").transform;
-        PhotonNetwork.Instantiate(VRPlayerPrefab.name, VRCam.position, VRCam.rotation);
+        PhotonNetwork.Instantiate(VRPlayerPrefab.name, new Vector3(VRCam.position.x, VRCam.position.y + 0.5f, VRCam.position.z), VRCam.rotation);
         Debug.Log("TransFORM: " + VRCam.position.x + " " + VRCam.position.y + " " + VRCam.position.z);
     }
 
